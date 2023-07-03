@@ -119,10 +119,10 @@
         </div>
       </div>
       <div   style="display: none" id="ambil2" >
-        <h1>Halaman2</h1>
+        <h1>laporan Management</h1>
       </div>
       <div   style="display: none" id="ambil3" >
-        <h1>Halaman3</h1>
+        <h1>Profil Perusahaan</h1>
       </div>
     </div>
     <script>
@@ -140,7 +140,6 @@
             });
             $(document).on('click', 'a[data-action="gotoPage"]', function (e) {
                 console.log("#ambil"+e.currentTarget.id)
-               
                 $("#ambil"+e.currentTarget.id).show(100);
                 if(localStorage.getItem("lastID")===e.currentTarget.id){
 
