@@ -18,7 +18,6 @@
           width: 90%;
         }
     </style>
-    <link rel="stylesheet" href="https://use.typekit.net/ovg3oac.css">
     <link
         href="https://fonts.googleapis.com/css?family=Montserrat"
         rel="stylesheet">
@@ -34,7 +33,6 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
         </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="functions-print.js"></script>
 
     
 </head>
@@ -133,53 +131,6 @@
             $(document).on('click', 'a[data-action="openDaftarIsi"]', function (e) {
                 $('#publicReport').toggleClass('active');
             });
-
-            // Donate Click
-            $(document).on('click', '[data-component="donate"] [data-href]', function () {
-                var link = $(this).attr('data-href');
-                window.open(link);
-            });
-
-            // Next Page
-            $(document).on('click', '[data-action="nextPage"]', function (e) {
-                $("iframe").each(function () {
-                    var src = $(this).attr('src');
-                    $(this).attr('src', src);
-                });
-                $(".instagram-media").each(function () {
-                    var video = $(this);
-                    var old = video.attr('src');
-                    video.attr('src', '');
-                    setTimeout(function () {
-                        video.attr('src', old);
-                    }, 0);
-                });
-                var nextElement = $(this).parents('article').next();
-
-                // Set Page Marker
-                var pageID = $(this).parents('article').next().attr('id');
-                $('a[data-action="gotoPage"]').parents('li').removeClass('active');
-                $('a[data-page="' + pageID + '"]').parents('li').addClass('active');
-
-                // Close all other pages
-                $('article.active').addClass('hide');
-
-                setTimeout(function () {
-                    $('article.active').removeClass('hide').removeClass('active');
-                }, 600);
-
-
-                // Open selected page
-                setTimeout(function () {
-                    $('article, html, body').scrollTop(0);
-                    nextElement.addClass('active');
-                }, 600);
-
-                adjustWidth();
-                e.preventDefault();
-            });
-
-            // Page Jump 
             $(document).on('click', 'a[data-action="gotoPage"]', function (e) {
                 console.log("#ambil"+e.currentTarget.id)
 
@@ -198,12 +149,6 @@
                 $('a[data-action="gotoPage"]').parents('li').removeClass('active');
                 $(this).parents('li').addClass('active');
                 setTimeout(function () {
-                    $('article.active').addClass('hide');
-                }, 500);
-                setTimeout(function () {
-                    $('article.active').removeClass('hide').removeClass('active');
-                }, 1200);
-                setTimeout(function () {
                     $('article, html, body').scrollTop(0);
                     nextElement.addClass('active');
                 }, 1200);
@@ -211,36 +156,11 @@
             });
 
 
-
             function checkPosition() {
-
-                var minPos = 1;
-                var maxPos = $('article').length;
-                var currentPage = $('article.active').attr('rel');
-
-                console.log(currentPage);
-
-                if (currentPage == minPos) {
-                    $('[data-action="prevPage"]').attr('disabled', true);
-                } else {
-                    $('[data-action="prevPage"]').attr('disabled', false);
-                }
-
-                if (currentPage == maxPos) {
-                    $('[data-action="nextPage"]').attr('disabled', true);
-                } else {
-                    $('[data-action="nextPage"]').attr('disabled', false);
-                }
 
             }
 
             function adjustWidth() {
-                if ($(window).width() <= 900) {
-                    $('.fullwidth').parents('[data-columns]').css({
-                        'min-height': '50vh'
-                    });
-                } else {
-                }
             }
             
             
