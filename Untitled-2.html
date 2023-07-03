@@ -121,10 +121,7 @@
         </div>
       </div>
       <div   style="display: none" id="ambil2" >
-        <h1>Halaman2</h1>
-      </div>
-      <div   style="display: none" id="ambil3" >
-        <h1>Halaman3</h1>
+        ambil2
       </div>
     </div>
     <script>
@@ -133,14 +130,10 @@
             $(document).on('click', 'a[data-action="openDaftarIsi"]', function (e) {
                 $('#publicReport').toggleClass('active');
             });
-
-            // Donate Click
             $(document).on('click', '[data-component="donate"] [data-href]', function () {
                 var link = $(this).attr('data-href');
                 window.open(link);
             });
-
-            // Next Page
             $(document).on('click', '[data-action="nextPage"]', function (e) {
                 $("iframe").each(function () {
                     var src = $(this).attr('src');
@@ -155,41 +148,24 @@
                     }, 0);
                 });
                 var nextElement = $(this).parents('article').next();
-
-                // Set Page Marker
                 var pageID = $(this).parents('article').next().attr('id');
                 $('a[data-action="gotoPage"]').parents('li').removeClass('active');
                 $('a[data-page="' + pageID + '"]').parents('li').addClass('active');
-
-                // Close all other pages
                 $('article.active').addClass('hide');
-
                 setTimeout(function () {
                     $('article.active').removeClass('hide').removeClass('active');
                 }, 600);
-
-
-                // Open selected page
                 setTimeout(function () {
                     $('article, html, body').scrollTop(0);
                     nextElement.addClass('active');
                 }, 600);
-
                 adjustWidth();
                 e.preventDefault();
             });
-
-            // Page Jump 
             $(document).on('click', 'a[data-action="gotoPage"]', function (e) {
                 console.log("#ambil"+e.currentTarget.id)
-
                 $("#ambil"+e.currentTarget.id).show(100);
-                if(localStorage.getItem("lastID")===e.currentTarget.id){
-
-                }else{
-
-                  $("#ambil"+localStorage.getItem("lastID")).hide(100);
-                }
+                $("#ambil"+localStorage.getItem("lastID")).hide(100);
                 localStorage.removeItem("lastID");
                 var pageID = $(this).attr('data-page');
                 var nextElement = $('#' + pageID);
@@ -209,47 +185,26 @@
                 }, 1200);
             e.preventDefault();
             });
-
-
-
             function checkPosition() {
-
                 var minPos = 1;
                 var maxPos = $('article').length;
                 var currentPage = $('article.active').attr('rel');
-
                 console.log(currentPage);
-
                 if (currentPage == minPos) {
                     $('[data-action="prevPage"]').attr('disabled', true);
                 } else {
                     $('[data-action="prevPage"]').attr('disabled', false);
                 }
-
                 if (currentPage == maxPos) {
                     $('[data-action="nextPage"]').attr('disabled', true);
                 } else {
                     $('[data-action="nextPage"]').attr('disabled', false);
                 }
-
             }
-
-            function adjustWidth() {
-                if ($(window).width() <= 900) {
-                    $('.fullwidth').parents('[data-columns]').css({
-                        'min-height': '50vh'
-                    });
-                } else {
-                }
-            }
-            
-            
         });
-
         function loadTemplate() {
                 loadShare()
         } 
-        
         function loadShare() {
           $('#reportNav ul').append(
             '<li style="list-style:none;" class="active"><a style="text-decoration:none"  id="1" href="#" data-action="gotoPage"><span>Iktisar Keuangan</span></a></li>' +
@@ -260,7 +215,7 @@
               '<li><a style="text-decoration:none" href="#"  id="6" data-action="gotoPage"><span>Laporan Pengelolaan Teknologi Informasi </span></a></li>'+
               '<li><a style="text-decoration:none" href="#"  id="7" data-action="gotoPage"><span>Analisis dan Pembahasan Managemen </span></a></li>',
           )
-        }
+  }
   
     </script>
 </body>
