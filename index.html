@@ -55,7 +55,7 @@
     </nav>
     <div id="publicReport">
     <div class="container">
-      <div   style="display: none" id="ambil1" >
+      <div id="ambil1" >
         <div class="col-12" >
           <div class="row teksTengah"   style=" background-image: url('gambar/background1.png'); background-repeat: no-repeat;
                   background-size: 100% 100%; min-height: 800px;">
@@ -127,24 +127,35 @@
     </div>
     <script>
         $(document).ready(function () {
+          localStorage.removeItem("lastID");
+            if(localStorage.getItem("lastID")===null)
+            {
+              localStorage.setItem("lastID", 1);
+            }else{
+              localStorage.setItem("lastID", e.currentTarget.id);
+            }
             loadTemplate()
             $(document).on('click', 'a[data-action="openDaftarIsi"]', function (e) {
                 $('#publicReport').toggleClass('active');
             });
             $(document).on('click', 'a[data-action="gotoPage"]', function (e) {
                 console.log("#ambil"+e.currentTarget.id)
-
+               
                 $("#ambil"+e.currentTarget.id).show(100);
                 if(localStorage.getItem("lastID")===e.currentTarget.id){
 
                 }else{
-
                   $("#ambil"+localStorage.getItem("lastID")).hide(100);
                 }
                 localStorage.removeItem("lastID");
                 var pageID = $(this).attr('data-page');
                 var nextElement = $('#' + pageID);
-                localStorage.setItem("lastID", e.currentTarget.id);
+                if(localStorage.getItem("lastID")==='')
+                  {
+                    localStorage.setItem("lastID", 1);
+                  }else{
+                    localStorage.setItem("lastID", e.currentTarget.id);
+                  }
                 $('#publicReport').toggleClass('active');
                 $('a[data-action="gotoPage"]').parents('li').removeClass('active');
                 $(this).parents('li').addClass('active');
