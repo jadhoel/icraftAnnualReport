@@ -473,7 +473,6 @@
           padding-top: 5rem; } }
       #reportNav .tableContents > div {
         padding: 3.5rem 4rem;
-        margin: 0 auto;
         max-width: 50rem;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -514,7 +513,7 @@
             align-items: center;
             text-align: left;
             color: #ffffff;
-            font-size: 2.5rem;
+            font-size: 2rem;
             padding: 1rem 0;
             display: block;
             font-weight: 100;
@@ -547,6 +546,7 @@
                   width: auto; } }
             #reportNav .tableContents ul li a span {
               color: #ffffff;
+              font-size: 2rem;
               text-transform: uppercase;
               line-height: 1.1;
               display: inline;
@@ -558,7 +558,7 @@
             #reportNav .tableContents ul li a:hover span {
               border-bottom: 2px solid #000; }
           #reportNav .tableContents ul li.active a span {
-            color: #777; }
+            color: #000000; }
     #reportNav .contactInfo {
       width: calc( 40% - 0rem);
       height: 100vh;
