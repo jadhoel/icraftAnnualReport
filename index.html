@@ -28,12 +28,19 @@
             display: none !important; } 
         }
 
-        .bg-body-tertiary {
-            /* --bs-bg-opacity: 1; */
-            /* background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important; */
-        }
+    </style>
 
-        
+    <style>
+      .navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: transparent;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
     </style>
 
     
@@ -61,7 +68,7 @@
       </div>
   </nav>
     <div id="publicReport">
-      <nav class="navbar bg-body-tertiary fixed-top d-lg-none">
+      <nav class="navbar fixed-top d-lg-none">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
