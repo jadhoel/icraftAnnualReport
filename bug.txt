@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yearly: Report Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://kit.fontawesome.com/441dc3de5c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <style>
+      .teksTengah {
+        display: flex;
+        align-items: center;
+        }
+        .youtube-video {
+          width: 90%;
+        }
+        @media (min-width: 992px) {
+          .d-lg-none {
+            display: none !important; } 
+        }
+
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 2em;
+            height: 2.5em;
+            vertical-align: middle;
+            background-image: var(--bs-navbar-toggler-icon-bg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        
+
+        .offcanvasnew {
+
+            background-color: #126DC1;
+            top: 0;
+            right: 0;
+            /* width: var(--bs-offcanvas-width); */
+            border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+            transform: translateX(100%);
+        }
+
+        .nav-link {
+            display: block;
+            padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+            font-size: var(--bs-nav-link-font-size);
+            font-weight: var(--bs-nav-link-font-weight);
+            color: var(--bs-nav-link-color);
+            text-decoration: none;
+            background: 0 0;
+            border: 0;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+            color: #ffffff;
+        }
+
+    </style>
+
+    
+
+    
+</head>
+
+<body data-view="publicReport">
+  
+  <nav id="reportNav">
+      <div class="sidebar">
+          <a style="text-decoration:none" class="toc" href="#" data-action="openDaftarIsi"><i class="fa fa-caret-down"></i>
+          &nbsp;&nbsp;Daftar Isi&nbsp;&nbsp;</i></a>
+      </div>
+      <div class="tableContents">
+          <div>
+              <ul>
+                <li  class="active"><a style="text-decoration:none"  id="1" href="#" data-action="gotoPage"><span>Iktisar Keuangan</span></a></li>
+                <li><a style="text-decoration:none" href="#"  id="2" data-action="gotoPage"><span>Laporan Management</span></a></li>
+                <li><a style="text-decoration:none" href="#"  id="3" data-action="gotoPage"><span>Profil Perusahaan </span></a></li>
+                <li><a style="text-decoration:none" href="#"  id="4" data-action="gotoPage"><span>Tinjau Operasional </span></a></li>
+                <li><a style="text-decoration:none" href="#"  id="5" data-action="gotoPage"><span>Laporan Pengelolaan SDM </span></a></li>
+                <li><a style="text-decoration:none" href="#"  id="6" data-action="gotoPage"><span>Laporan Pengelolaan Teknologi Informasi </span></a></li>
+                <li><a style="text-decoration:none" href="#"  id="7" data-action="gotoPage"><span>Analisis dan Pembahasan Managemen </span></a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <div id="publicReport">
+      <nav class="navbar fixed-top d-lg-none">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvasnew" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Daftar Isi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas" data-bs-dismiss="offcanvas"   href="#"  id="1" data-action="gotoPage" href="#">Iktisar Keuangan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas"  href="#"  id="2" data-action="gotoPage" href="#">Laporan Management</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas"  href="#"  id="3" data-action="gotoPage" href="#">Profil Perusahaan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas"  href="#"  id="4" data-action="gotoPage" href="#">Tinjau Operasional</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas"  href="#"  id="5" data-action="gotoPage" href="#">Laporan Pengelolaan SDM</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas"  href="#"  id="6" data-action="gotoPage" href="#">Laporan Pengelolaan Teknologi Informasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-dismiss="offcanvas"  href="#"  id="7" data-action="gotoPage" href="#">Analisis dan Pembahasan Managemen</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div id="ambil1" >
+          <div class="col-12 animate__animated animate__pulse">
+            <div class="row teksTengah"   style=" background-image: url('gambar/background1.png'); background-repeat: no-repeat;
+                    background-size: 100% 100%; min-height: 800px;">
+                <div class="col-6" >
+                  <img width="100%" src="gambar/home1.png" alt="">
+                </div>
+                <div class="col-6">
+                  <img width="50%" src="gambar/home2.png" alt="">
+                  <img width="100%" src="gambar/judul.png" alt="">
+                </div>
+              </div>
+          </div>
+          <div class="col-12 animate__animated animate__pulse">
+              <div class="row teksTengah"   style=" background-image: url('gambar/background2.png'); background-repeat: no-repeat;
+                    background-size: 100% 100%; min-height: 800px;  top: -905px;">
+                <div class="col-6" >
+                    <h1 style="font-size: 9rem;" >01</h1>
+                    <h1 style="font-size: 7rem;">Ikhtisar Keuangan</h1>
+                    <h1 style="font-size: 3rem;">Financial Highlights</h1>
+                </div>
+                <div class="col-6">
+                </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <div class="row teksTengah"   style=" background-image: url('gambar/background3.png'); background-repeat: no-repeat;
+                    background-size: 100% 100%; min-height: 800px;">
+                <div class="col-6" >
+                </div>
+                <div class="col-6">
+                    <h1 style="font-size: 35px; font-weight: bold; color:#06539A;" >Profil Dewan Komisaris</h1>
+                    <p style="font-size: 2rem;" >Board of Commissioners’ Profile</p>
+                    <p style="font-size: 11px;">PT BRI Asuransi Indonesia atau lebih dikenal dengan nama BRI Insurance atau BRINS selanjutnya disebut Perseroan adalah sebuah perusahaan asuransi umum nasional yang didirikan pada tanggal 17 April 1989 berdasarkan akta notaris Muhaini Salim, S.H. di Jakarta dengan No. 121 dan disahkan dengan penetapan Menteri Kehakiman RI pada tanggal 3 Mei 1989 No. C2.4160. HT.01.01 Tahun 1989. Perseroan memperoleh izin lisensi Dagang dari Menteri Keuangan RI dengan pengesahan No. KEP.128/KM.13/1989 tanggal 26 Agustus 1989. <br><br>
+
+                        Tujuan awal didirikannya BRI Insurance adalah untuk memberikan perlindungan asuransi terhadap aset PT Bank Rakyat Indonesia (Persero), Tbk. termasuk agunan para nasabahnya. Seiring dengan perkembangannya, BRI Insurance terus memperluas pangsa pasar dan jaringan kerja yang tidak hanya berfokus kepada bank BRI dan nasabahnya, tetapi juga melayani masyarakat luas, baik itu perorangan maupun perusahaan, termasuk BUMN, BUMD, dan perusahaan swasta. Untuk melengkapi pelayanan Perseroan kepada masyarakat, pada tahun 2003, Unit Usaha Syariah didirikan untuk melayani pangsa pasar Syariah dan berencana melakukan spin off pada tahun 2024 sesuai dengan yang tercantum dalam Rencana Kerja Pemisahan Unit Syariah (RKPUS).<br><br>
+
+                      Sejak tanggal 31 Januari 2020, PT Asuransi Bringin Sejahtera Artamakmur berganti nama menjadi PT BRI Asuransi Indonesia, perubahan nama perusahaan diiringi dengan rebranding logo dari BRINS menjadi BRI Insurance. Rebranding resmi diluncurkan pada saat BRI Insurance merayakan ulang tahun nya yang ke-31 (tiga puluh satu) pada tanggal 17 April 2020. Transformasi yang dilakukan merupakan salah satu wujud dari peralihan saham milik Dana Pensiun BRI kepada PT Bank Rakyat Indonesia (Persero), Tbk.</p>
+                    <p >Bambang Krisminarno*</p>
+                    <p>Komisaris Utama <br>
+                      President Commissioner</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-12">
+            <div class="row teksTengah"   style=" 
+                  background-size: 100% 100%; min-height: 800px;">
+              <div class="col-6" >
+              <!-- <iframe class="youtube-video"  width="560" height="315" src="https://www.youtube.com/embed/zqvNe61x95U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              </div>
+              <div class="col-6">
+                  <h1 style="font-size: 2rem;" >Sekilas Perseroan</h1>
+                  <h1 style="font-size: 2rem;" >Company at A Glance</h1>
+                  <p style="font-size: 13px;">PT BRI Asuransi Indonesia atau lebih dikenal dengan nama BRI Insurance atau BRINS selanjutnya disebut Perseroan adalah sebuah perusahaan asuransi umum nasional yang didirikan pada tanggal 17 April 1989 berdasarkan akta notaris Muhaini Salim, S.H. di Jakarta dengan No. 121 dan disahkan dengan penetapan Menteri Kehakiman RI pada tanggal 3 Mei 1989 No. C2.4160. HT.01.01 Tahun 1989. Perseroan memperoleh izin lisensi Dagang dari Menteri Keuangan RI dengan pengesahan No. KEP.128/KM.13/1989 tanggal 26 Agustus 1989. <br><br>
+
+                      Tujuan awal didirikannya BRI Insurance adalah untuk memberikan perlindungan asuransi terhadap aset PT Bank Rakyat Indonesia (Persero), Tbk. termasuk agunan para nasabahnya. Seiring dengan perkembangannya, BRI Insurance terus memperluas pangsa pasar dan jaringan kerja yang tidak hanya berfokus kepada bank BRI dan nasabahnya, tetapi juga melayani masyarakat luas, baik itu perorangan maupun perusahaan, termasuk BUMN, BUMD, dan perusahaan swasta. Untuk melengkapi pelayanan Perseroan kepada masyarakat, pada tahun 2003, Unit Usaha Syariah didirikan untuk melayani pangsa pasar Syariah dan berencana melakukan spin off pada tahun 2024 sesuai dengan yang tercantum dalam Rencana Kerja Pemisahan Unit Syariah (RKPUS).<br><br>
+
+                    Sejak tanggal 31 Januari 2020, PT Asuransi Bringin Sejahtera Artamakmur berganti nama menjadi PT BRI Asuransi Indonesia, perubahan nama perusahaan diiringi dengan rebranding logo dari BRINS menjadi BRI Insurance. Rebranding resmi diluncurkan pada saat BRI Insurance merayakan ulang tahun nya yang ke-31 (tiga puluh satu) pada tanggal 17 April 2020. Transformasi yang dilakukan merupakan salah satu wujud dari peralihan saham milik Dana Pensiun BRI kepada PT Bank Rakyat Indonesia (Persero), Tbk.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row"   style=" 
+                  background-size: 100% 100%; min-height: 600px;">
+              <div class="col-6" >
+                <img width="100%" src="gambar/teks.png" alt="">
+              </div>
+              <div class="col-6" >
+                <img width="100%" src="gambar/image.png" alt="">
+              </div>
+              <div class="col-12" >
+                <p>
+                  Sejalan dengan pertumbuhan dan perkembangan bisnis perusahaan, BRI Insurance mengelola Risiko Enterprise yang terintegrasi, terukur, dinamis, dan objektif, guna memberikan nilai tambah dan menjaga keberlanjutan perusahaan. Penerapan proses manajemen risiko dijalankan pada setiap proses bisnis perusahaan dengan mengidentifikasi, mengukur, memantau dan mengendalikan eksposur risiko. Penerapan proses manajemen risiko dilakukan melalui sinergi dan kolaborasi antara three line of defense dalam rangka menjalankan bisnis dan menjaga eksposur risiko perusahaan pada batas risk tolerance dan tidak melampaui risk appetite perusahaan. <br><br>
+
+
+                    BRI Insurance terus melakukan upaya perbaikan dalam rangka menerapkan enterprise risk management yang efektif dalam rangka mewujudkan tujuan perusahaan yaitu pertumbuhan bisnis dan pencapaian kinerja perusahaan yang baik, sehat, berkualitas, dan sustain. Pelaksanaan self assessment dan pemantauan profil risiko perusahaan dilakukan secara triwulanan sebagai bentuk penerapan proses manajemen risiko yang baik dan early warning signal. Berdasarkan hasil penilaian profil risiko perusahaan pada triwulan IV tahun 2021, perusahaan memiliki skor profil risiko low to moderate dengan tingkat Kesehatan perusahaan
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row"   style=" 
+                  background-size: 100% 100%; min-height: 900px;">
+              <div class="col-12 d-flex justify-content-center" >
+                  <h1>Kepala Divisi</h1>
+              </div>
+              <div class="col-12 d-flex justify-content-center" >
+                  <h1>Head of Division</h1>
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_1.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_2.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_3.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_1.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_2.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_3.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row"   style=" 
+                  background-size: 100% 100%; min-height: 600px;">
+              <div class="col-4" >
+                <img width="70%" src="gambar/Chart1.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="70%" src="gambar/Chart2.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="70%" src="gambar/Chart3.png" alt="">
+              </div>
+              <div class="col-6 d-flex justify-content-center" >
+                <img width="50%" src="gambar/Chart4.png" alt="">
+              </div>
+              <div class="col-6 d-flex justify-content-center" >
+                <img width="50%" src="gambar/Chart5.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="ambil2" >
+          <div class="col-12 animate__animated animate__pulse">
+            <div class="row teksTengah"   style=" background-image: url('gambar/background1.png'); background-repeat: no-repeat;
+                    background-size: 100% 100%; min-height: 800px;">
+                <div class="col-6" >
+                  <img width="100%" src="gambar/home1.png" alt="">
+                </div>
+                <div class="col-6">
+                  <img width="50%" src="gambar/home2.png" alt="">
+                  <img width="100%" src="gambar/judul.png" alt="">
+                </div>
+              </div>
+          </div>
+          <div class="col-12 animate__animated animate__pulse">
+              <div class="row teksTengah"   style=" background-image: url('gambar/background2.png'); background-repeat: no-repeat;
+                    background-size: 100% 100%; min-height: 800px;  top: -905px;">
+                <div class="col-6" >
+                    <h1 style="font-size: 9rem;" >01</h1>
+                    <h1 style="font-size: 7rem;">Ikhtisar Keuangan</h1>
+                    <h1 style="font-size: 3rem;">Financial Highlights</h1>
+                </div>
+                <div class="col-6">
+                </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <div class="row teksTengah"   style=" background-image: url('gambar/background3.png'); background-repeat: no-repeat;
+                    background-size: 100% 100%; min-height: 800px;">
+                <div class="col-6" >
+                </div>
+                <div class="col-6">
+                    <h1 style="font-size: 35px; font-weight: bold; color:#06539A;" >Profil Dewan Komisaris</h1>
+                    <p style="font-size: 2rem;" >Board of Commissioners’ Profile</p>
+                    <p style="font-size: 11px;">PT BRI Asuransi Indonesia atau lebih dikenal dengan nama BRI Insurance atau BRINS selanjutnya disebut Perseroan adalah sebuah perusahaan asuransi umum nasional yang didirikan pada tanggal 17 April 1989 berdasarkan akta notaris Muhaini Salim, S.H. di Jakarta dengan No. 121 dan disahkan dengan penetapan Menteri Kehakiman RI pada tanggal 3 Mei 1989 No. C2.4160. HT.01.01 Tahun 1989. Perseroan memperoleh izin lisensi Dagang dari Menteri Keuangan RI dengan pengesahan No. KEP.128/KM.13/1989 tanggal 26 Agustus 1989. <br><br>
+
+                        Tujuan awal didirikannya BRI Insurance adalah untuk memberikan perlindungan asuransi terhadap aset PT Bank Rakyat Indonesia (Persero), Tbk. termasuk agunan para nasabahnya. Seiring dengan perkembangannya, BRI Insurance terus memperluas pangsa pasar dan jaringan kerja yang tidak hanya berfokus kepada bank BRI dan nasabahnya, tetapi juga melayani masyarakat luas, baik itu perorangan maupun perusahaan, termasuk BUMN, BUMD, dan perusahaan swasta. Untuk melengkapi pelayanan Perseroan kepada masyarakat, pada tahun 2003, Unit Usaha Syariah didirikan untuk melayani pangsa pasar Syariah dan berencana melakukan spin off pada tahun 2024 sesuai dengan yang tercantum dalam Rencana Kerja Pemisahan Unit Syariah (RKPUS).<br><br>
+
+                      Sejak tanggal 31 Januari 2020, PT Asuransi Bringin Sejahtera Artamakmur berganti nama menjadi PT BRI Asuransi Indonesia, perubahan nama perusahaan diiringi dengan rebranding logo dari BRINS menjadi BRI Insurance. Rebranding resmi diluncurkan pada saat BRI Insurance merayakan ulang tahun nya yang ke-31 (tiga puluh satu) pada tanggal 17 April 2020. Transformasi yang dilakukan merupakan salah satu wujud dari peralihan saham milik Dana Pensiun BRI kepada PT Bank Rakyat Indonesia (Persero), Tbk.</p>
+                    <p >Bambang Krisminarno*</p>
+                    <p>Komisaris Utama <br>
+                      President Commissioner</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-12">
+            <div class="row teksTengah"   style=" 
+                  background-size: 100% 100%; min-height: 800px;">
+              <div class="col-6" >
+              <!-- <iframe class="youtube-video"  width="560" height="315" src="https://www.youtube.com/embed/zqvNe61x95U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              </div>
+              <div class="col-6">
+                  <h1 style="font-size: 2rem;" >Sekilas Perseroan</h1>
+                  <h1 style="font-size: 2rem;" >Company at A Glance</h1>
+                  <p style="font-size: 13px;">PT BRI Asuransi Indonesia atau lebih dikenal dengan nama BRI Insurance atau BRINS selanjutnya disebut Perseroan adalah sebuah perusahaan asuransi umum nasional yang didirikan pada tanggal 17 April 1989 berdasarkan akta notaris Muhaini Salim, S.H. di Jakarta dengan No. 121 dan disahkan dengan penetapan Menteri Kehakiman RI pada tanggal 3 Mei 1989 No. C2.4160. HT.01.01 Tahun 1989. Perseroan memperoleh izin lisensi Dagang dari Menteri Keuangan RI dengan pengesahan No. KEP.128/KM.13/1989 tanggal 26 Agustus 1989. <br><br>
+
+                      Tujuan awal didirikannya BRI Insurance adalah untuk memberikan perlindungan asuransi terhadap aset PT Bank Rakyat Indonesia (Persero), Tbk. termasuk agunan para nasabahnya. Seiring dengan perkembangannya, BRI Insurance terus memperluas pangsa pasar dan jaringan kerja yang tidak hanya berfokus kepada bank BRI dan nasabahnya, tetapi juga melayani masyarakat luas, baik itu perorangan maupun perusahaan, termasuk BUMN, BUMD, dan perusahaan swasta. Untuk melengkapi pelayanan Perseroan kepada masyarakat, pada tahun 2003, Unit Usaha Syariah didirikan untuk melayani pangsa pasar Syariah dan berencana melakukan spin off pada tahun 2024 sesuai dengan yang tercantum dalam Rencana Kerja Pemisahan Unit Syariah (RKPUS).<br><br>
+
+                    Sejak tanggal 31 Januari 2020, PT Asuransi Bringin Sejahtera Artamakmur berganti nama menjadi PT BRI Asuransi Indonesia, perubahan nama perusahaan diiringi dengan rebranding logo dari BRINS menjadi BRI Insurance. Rebranding resmi diluncurkan pada saat BRI Insurance merayakan ulang tahun nya yang ke-31 (tiga puluh satu) pada tanggal 17 April 2020. Transformasi yang dilakukan merupakan salah satu wujud dari peralihan saham milik Dana Pensiun BRI kepada PT Bank Rakyat Indonesia (Persero), Tbk.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row"   style=" 
+                  background-size: 100% 100%; min-height: 600px;">
+              <div class="col-6" >
+                <img width="100%" src="gambar/teks.png" alt="">
+              </div>
+              <div class="col-6" >
+                <img width="100%" src="gambar/image.png" alt="">
+              </div>
+              <div class="col-12" >
+                <p>
+                  Sejalan dengan pertumbuhan dan perkembangan bisnis perusahaan, BRI Insurance mengelola Risiko Enterprise yang terintegrasi, terukur, dinamis, dan objektif, guna memberikan nilai tambah dan menjaga keberlanjutan perusahaan. Penerapan proses manajemen risiko dijalankan pada setiap proses bisnis perusahaan dengan mengidentifikasi, mengukur, memantau dan mengendalikan eksposur risiko. Penerapan proses manajemen risiko dilakukan melalui sinergi dan kolaborasi antara three line of defense dalam rangka menjalankan bisnis dan menjaga eksposur risiko perusahaan pada batas risk tolerance dan tidak melampaui risk appetite perusahaan. <br><br>
+
+
+                    BRI Insurance terus melakukan upaya perbaikan dalam rangka menerapkan enterprise risk management yang efektif dalam rangka mewujudkan tujuan perusahaan yaitu pertumbuhan bisnis dan pencapaian kinerja perusahaan yang baik, sehat, berkualitas, dan sustain. Pelaksanaan self assessment dan pemantauan profil risiko perusahaan dilakukan secara triwulanan sebagai bentuk penerapan proses manajemen risiko yang baik dan early warning signal. Berdasarkan hasil penilaian profil risiko perusahaan pada triwulan IV tahun 2021, perusahaan memiliki skor profil risiko low to moderate dengan tingkat Kesehatan perusahaan
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row"   style=" 
+                  background-size: 100% 100%; min-height: 900px;">
+              <div class="col-12 d-flex justify-content-center" >
+                  <h1>Kepala Divisi</h1>
+              </div>
+              <div class="col-12 d-flex justify-content-center" >
+                  <h1>Head of Division</h1>
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_1.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_2.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_3.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_1.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_2.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="100%" src="gambar/foto orang_3.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row"   style=" 
+                  background-size: 100% 100%; min-height: 600px;">
+              <div class="col-4" >
+                <img width="70%" src="gambar/Chart1.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="70%" src="gambar/Chart2.png" alt="">
+              </div>
+              <div class="col-4" >
+                <img width="70%" src="gambar/Chart3.png" alt="">
+              </div>
+              <div class="col-6 d-flex justify-content-center" >
+                <img width="50%" src="gambar/Chart4.png" alt="">
+              </div>
+              <div class="col-6 d-flex justify-content-center" >
+                <img width="50%" src="gambar/Chart5.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div   style="display: none" id="ambil3" >
+          <h1>Profil Perusahaan</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          localStorage.removeItem("lastID");
+            if(localStorage.getItem("lastID")===null)
+            {
+              localStorage.setItem("lastID", 1);
+            }else{
+              localStorage.setItem("lastID", e.currentTarget.id);
+            }
+            $(document).on('click', 'a[data-action="openDaftarIsi"]', function (e) {
+                $('#publicReport').toggleClass('active');
+            });
+            $(document).on('click', 'a[data-action="gotoPage"]', function (e) {
+                console.log("#ambil"+e.currentTarget.id)
+                $("#ambil"+e.currentTarget.id).show(100);
+                if(localStorage.getItem("lastID")===e.currentTarget.id){
+                }else{
+                  $("#ambil"+localStorage.getItem("lastID")).hide(100);
+                }
+                localStorage.removeItem("lastID");
+                var pageID = $(this).attr('data-page');
+                var nextElement = $('#' + pageID);
+                if(localStorage.getItem("lastID")==='')
+                  {
+                    localStorage.setItem("lastID", 1);
+                  }else{
+                    localStorage.setItem("lastID", e.currentTarget.id);
+                  }
+                  if(e.target.className==''){
+                    $('#publicReport').toggleClass('active');
+                    $('a[data-action="gotoPage"]').parents('li').removeClass('active');
+                    $(this).parents('li').addClass('active');
+                  }
+                  $('html, body').animate({ scrollTop: 0 }, 'fast');
+            e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
