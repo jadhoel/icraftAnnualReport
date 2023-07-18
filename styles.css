@@ -1204,7 +1204,19 @@
       }
       .fontMobile {
         font-size: 4rem;
-        }
+      }
+      .fontMobileDesktopsS {
+        font-size: 20px;
+      }
+      .fontMobileDesktopS {
+        font-size: 30px;
+      }
+      .fontMobileDesktopM {
+        font-size: 50px;
+      }
+      .fontMobileDesktopL {
+        font-size: 75px;
+      }
       .backgraound3{
         min-height: 800px;  
       }
