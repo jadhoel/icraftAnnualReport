@@ -1175,7 +1175,8 @@
           color: #ffffff;
         }
         .backgraound3{
-            min-height: 600px;  
+          padding: 20px 0;
+            /* min-height: 590px;   */
             background-image: none !important;
         }
         
