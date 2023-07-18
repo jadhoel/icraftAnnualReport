@@ -1182,6 +1182,9 @@
         .enterlarge{
           padding: 30px 0;
         }
+        .chart6x6{
+          width:70%; 
+        }
         
         
       .container, .container-sm {
@@ -1205,6 +1208,7 @@
       .backgraound3{
         min-height: 800px;  
       }
+      
       .enterlarge{
         padding: 50px 0;
       }
