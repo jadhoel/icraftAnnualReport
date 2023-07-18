@@ -1175,11 +1175,13 @@
           color: #ffffff;
         }
         .backgraound3{
-          padding: 20px 0;
             /* min-height: 590px;   */
             background-image: none !important;
         }
 
+        .enterlarge{
+          padding: 40px 0;
+        }
         
         
       .container, .container-sm {
@@ -1205,7 +1207,7 @@
       }
       
       .enterlarge{
-        padding: 80px 0;
+        padding: 50px 0;
       }
     }
 
