@@ -29,12 +29,75 @@
       background-size: 100%, 25%, 25%;
       background-repeat: no-repeat;
       }
+    .fontMobile {
+      font-size: 2rem;
+      }
+      .fontCenter {
+        padding: 7px 0px 0px 0px;
+        color: #ffffff;
+      }
+      .backgraoundMod1{
+          min-height: 600px;  
+      }
+      
+    .container, .container-sm {
+        max-width: 900px;
+    }
   }
   @media only screen and (min-width: 1000px) {
     .backgroundHtml {
         height: 900px;
       }
+    .fontMobile {
+      font-size: 4rem;
+      }
+    .backgraoundMod1{
+      min-height: 800px;  
+    }
   }
+  .teksTengah {
+    display: flex;
+    align-items: center;
+    }
+    .youtube-video {
+      width: 90%;
+    }
+    @media (min-width: 992px) {
+      .d-lg-none {
+        display: none !important; } 
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 2em;
+        height: 2.5em;
+        vertical-align: middle;
+        background-image: var(--bs-navbar-toggler-icon-bg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+    .offcanvasnew {
+        background-color: #126DC1;
+        top: 0;
+        right: 0;
+        /* width: var(--bs-offcanvas-width); */
+        border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+        transform: translateX(100%);
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+        font-size: var(--bs-nav-link-font-size);
+        font-weight: var(--bs-nav-link-font-weight);
+        color: var(--bs-nav-link-color);
+        text-decoration: none;
+        background: 0 0;
+        border: 0;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+        color: #ffffff;
+    }
   </style>
 
 <body data-view="publicReport">
@@ -102,7 +165,7 @@
         <div class="ambil1 d-none" >
           <!--BATAS-->
           <div class="row g-0 teksTengah" style=" 
-            min-height: 800px;  
+            min-height: 600px;  
             background-image: url(gambar/background1.png);
             background-size: 100%;
             background-repeat: no-repeat; 
@@ -116,7 +179,7 @@
               <div class="text-center">
                 <img width="50%" src="gambar/home2.png" alt="">
               </div>
-              <p style="color: #06539A; font-size: 40px;" class="text-center fw-bold" >Leading
+              <p style="color: #06539A; " class="text-center fw-bold fontMobile" >Leading
                 in Micro Insurance
                 with Product Diversity
                 and Digitalized
@@ -126,14 +189,13 @@
           <!--BATAS-->
           <!--BATAS-->
           <div class="row g-0 teksTengah backgroundHtml" style=" 
-          
           background-image:url('gambar/background2.png');
           background-position: center center;
-                ">
-            <div class="col-md-6" style="padding-left: 3em;">
-              <p class="fw-bold" style="font-size: 4rem; color: #06539A;" >01</p>
-              <p class="fw-bold" style="font-size: 4rem; color: #06539A;">Ikhtisar <br> Keuangan</p>
-              <p style="font-size: 2rem; color: #F27026;">Financial Highlights</p>
+          ">
+            <div class="col-md-6  " style="padding-left: 3em;" >
+              <p class="fw-bold fontMobile" style="color: #06539A;">01</p>
+              <p class="fw-bold fontMobile" style="color: #06539A;">Ikhtisar <br> Keuangan</p>
+              <p class="fontMobile" style="color: #F27026;">Financial Highlights</p>
             </div>
             <div class="col-md-6">
             </div>
@@ -142,20 +204,14 @@
       <!--BATAS AWAL-->
       
       <div class="container" >
-          <div class="row g-0 teksTengah" style=" 
+          <div class="row g-0 teksTengah backgraoundMod1" style=" 
             background: url(gambar/background3.png);
-                background-size: 50%;
                 background-size: cover;
                 -webkit-background-size: cover;
-                -moz-background-size: cover;
-                width: 100%;
-              height: auto;
-             min-height: 800px;  
-                  
                   ">
             <div class="col-md-6" ">
             </div>
-            <div class="col-md-6" style="padding-right: 4em; "  >
+            <div class="col-md-6"   >
               <div class="container" >
                   <h1 class="fw-bold" style="font-size: 2rem; color: #06539A; " >Profil Dewan Komisaris</h1>
                   <h1 class="fw-bold" style="font-size: 1rem; color: #F27026;">Board of Commissioners’ Profile</h1>
@@ -200,7 +256,7 @@
             <!--BATAS AWAL-->
             <div class="container">
               <div class="row gy-4">
-                <div class="col-md-6"  style="background-color: #F27026; height: 50%;">
+                <div class="col-md-6"  style="background-color: #F27026;">
                   <div class="p-3">
                     <p class="fontCenter" >
                       Sumber risiko operasional adalah struktur organisasi, SDM, volume dan beban kerja yang dimiliki, tingkat kompleksitas Perseroan yang tinggi, sistem dan teknologi informasi tidak memadai, terdapat kecurangan dan permasalahan hukum, serta adanya gangguan bisnis Perseroan. 
@@ -227,7 +283,7 @@
               </div>
             </div>
         <!--BATAS AKHIR-->
-        <br><br><br><br>
+        <br><br>
             <!--BATAS AWAL-->
             <div class="container">
                 <div class="row gy-5">
