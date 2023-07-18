@@ -1179,6 +1179,8 @@
             /* min-height: 590px;   */
             background-image: none !important;
         }
+
+        
         
       .container, .container-sm {
           max-width: 900px;
@@ -1200,6 +1202,10 @@
         }
       .backgraound3{
         min-height: 800px;  
+      }
+      
+      .enterlarge{
+        padding: 80px 0;
       }
     }
 
