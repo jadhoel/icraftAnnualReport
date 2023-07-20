@@ -1148,8 +1148,6 @@
       width: 100%;
       min-height: 20rem; }
   
-  
-  
   @media screen and (min-width:1800px){
     .sectionLayout .slot {
       min-height: 32rem !important;
@@ -1158,105 +1156,117 @@
   .teksTengah {
     display: flex;
     align-items: center;
+  }
+  .youtube-video {
+    width: 90%;
+  }
+  
+  /* Mobile */
+  @media only screen and (max-width: 1000px) {
+    .backgroundA {
+      background-size: 100%, 25%, 25%;
+      background-repeat: no-repeat;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      background-position: center center;
     }
-    .youtube-video {
-      width: 90%;
+    .backgroundB{
+        background-image: none !important;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
     }
-    @media only screen and (max-width: 1000px) {
-      .background2 {
-        background-size: 100%, 25%, 25%;
-        background-repeat: no-repeat;
-        }
-      .fontMobile {
-        font-size: 2rem;
-        }
-        .fontCenter {
-          padding: 7px 0px 0px 0px;
-          color: #ffffff;
-        }
-        .backgraound3{
-            /* min-height: 590px;   */
-            background-image: none !important;
-        }
+    .fontMobile {
+    font-size: 2rem;
+    }
+    .fontCenter {
+      padding: 7px 0px 0px 0px;
+      color: #ffffff;
+    }
+    .enterlarge{
+      padding: 30px 0;
+    }
+    .chart6x6{
+      width:70%; 
+    }
+    .container, .container-sm {
+        max-width: 900px;
+    }
+  }
+  /* Desktop */
+  @media (min-width: 992px) {
+    .fontCenter {
+      padding: 112px 50px 101px 84px;
+      color: #ffffff;
+    }
+    .d-lg-none {
+      display: none !important; 
+    } 
+    .backgroundA {
+      height: 900px;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      background-position: center center;
+    }
+    .backgroundB{
+      min-height: 800px;
+      display: flex;
+      align-items: center;
+      padding: 50px 0;
+    }
+    .fontMobile {
+      font-size: 4rem;
+    }
+    .fontMobileDesktopsS {
+      font-size: 20px;
+    }
+    .fontMobileDesktopS {
+      font-size: 30px;
+    }
+    .fontMobileDesktopM {
+      font-size: 50px;
+    }
+    .fontMobileDesktopL {
+      font-size: 75px;
+    }
+    .enter{
+      padding: 50px 0;
+    }
+  }
 
-        .enterlarge{
-          padding: 30px 0;
-        }
-        .chart6x6{
-          width:70%; 
-        }
-        
-        
-      .container, .container-sm {
-          max-width: 900px;
-      }
-    }
-    @media (min-width: 992px) {
-      .fontCenter {
-        padding: 112px 50px 101px 84px;
-        color: #ffffff;
-      }
-      .d-lg-none {
-        display: none !important; 
-      } 
-      .background2 {
-        height: 900px;
-      }
-      .fontMobile {
-        font-size: 4rem;
-      }
-      .fontMobileDesktopsS {
-        font-size: 20px;
-      }
-      .fontMobileDesktopS {
-        font-size: 30px;
-      }
-      .fontMobileDesktopM {
-        font-size: 50px;
-      }
-      .fontMobileDesktopL {
-        font-size: 75px;
-      }
-      .backgraound3{
-        min-height: 800px;  
-      }
-      
-      .enterlarge{
-        padding: 50px 0;
-      }
-    }
+  .navbar-toggler-icon {
+      display: inline-block;
+      width: 2em;
+      height: 2.5em;
+      vertical-align: middle;
+      background-image: var(--bs-navbar-toggler-icon-bg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+  }
+  .offcanvasnew {
+      background-color: #126DC1;
+      top: 0;
+      right: 0;
+      /* width: var(--bs-offcanvas-width); */
+      border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+      transform: translateX(100%);
+  }
 
-    .navbar-toggler-icon {
-        display: inline-block;
-        width: 2em;
-        height: 2.5em;
-        vertical-align: middle;
-        background-image: var(--bs-navbar-toggler-icon-bg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-    }
-    .offcanvasnew {
-        background-color: #126DC1;
-        top: 0;
-        right: 0;
-        /* width: var(--bs-offcanvas-width); */
-        border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
-        transform: translateX(100%);
-    }
-
-    .nav-link {
-        display: block;
-        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-        font-size: var(--bs-nav-link-font-size);
-        font-weight: var(--bs-nav-link-font-weight);
-        color: var(--bs-nav-link-color);
-        text-decoration: none;
-        background: 0 0;
-        border: 0;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-        color: #ffffff;
-    }
+  .nav-link {
+      display: block;
+      padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+      font-size: var(--bs-nav-link-font-size);
+      font-weight: var(--bs-nav-link-font-weight);
+      color: var(--bs-nav-link-color);
+      text-decoration: none;
+      background: 0 0;
+      border: 0;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+      color: #ffffff;
+  }
 
     
   /* css 08-10-2020 fix financial imgs impact israel report end */
