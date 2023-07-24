@@ -170,7 +170,7 @@ html body {
   font-family: 'Montserrat', sans-serif; 
   /* font navbar Number */
   font-size: 1.5rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 1.1;
   display: inline;
   -webkit-transition: all .3s;
@@ -220,3 +220,90 @@ html body {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     color: #ffffff;
 }
+
+.teksTengah {
+  display: flex;
+  align-items: center;
+}
+.youtube-video {
+  width: 90%;
+}
+.enterSpace{
+  padding-top: 5%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 1000px) {
+  .backgroundA {
+    background-size: 100%, 25%, 25%;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    background-position: center center;
+  }
+  .backgroundB{
+      background-image: none !important;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+  }
+  .fontMobile {
+  font-size: 2rem;
+  }
+  .fontCenter {
+    padding: 7px 0px 0px 0px;
+    color: #ffffff;
+  }
+  .enterlarge{
+    padding: 30px 0;
+  }
+  .chart6x6{
+    width:70%; 
+  }
+  .container, .container-sm {
+      max-width: 900px;
+  }
+}
+/* Desktop */
+@media (min-width: 992px) {
+  .fontCenter {
+    padding: 112px 50px 101px 84px;
+    color: #ffffff;
+  }
+  .d-lg-none {
+    display: none !important; 
+  } 
+  .backgroundA {
+    height: 900px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    background-position: center center;
+  }
+  .backgroundB{
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+  }
+  .fontMobile {
+    font-size: 4rem;
+  }
+  .fontMobileDesktopsS {
+    font-size: 20px;
+  }
+  .fontMobileDesktopS {
+    font-size: 30px;
+  }
+  .fontMobileDesktopM {
+    font-size: 50px;
+  }
+  .fontMobileDesktopL {
+    font-size: 75px;
+  }
+  .enter{
+    padding: 50px 0;
+  }
+}
+
