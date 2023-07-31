@@ -182,7 +182,7 @@ html body {
 #reportNav .tableContents ul li a:hover span {
   border-bottom: 2px solid #00c0cd; }
 #reportNav .tableContents ul li.active a span {
-  color: #000000; 
+  color: #ca8686;
 }
 [data-component="section-title"],
 [data-component="opening-cover"],
@@ -232,6 +232,16 @@ html body {
   padding-top: 5%;
 }
 
+.container-fluid{
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Mobile */
 @media only screen and (max-width: 1000px) {
   .backgroundA {
@@ -259,7 +269,7 @@ html body {
     padding: 30px 0;
   }
   .chart6x6{
-    width:70%; 
+    width:55%; 
   }
   .container, .container-sm {
       max-width: 900px;
@@ -288,7 +298,7 @@ html body {
     padding: 50px 0;
   }
   .fontMobile {
-    font-size: 4rem;
+    font-size: 1.3rem;
   }
   .fontMobileDesktopsS {
     font-size: 20px;
@@ -304,6 +314,12 @@ html body {
   }
   .enter{
     padding: 50px 0;
+  }
+  .chart6x6{
+    width:35%; 
+  }
+  .nextSatu{
+    height: 750px;
   }
 }
 
